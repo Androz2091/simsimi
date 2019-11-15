@@ -42,7 +42,7 @@ const format = response => {
 module.exports = options => {
   const {
     key,
-    lang = 'en',
+    lang = 'fr',
     api = 'https://wsapi.simsimi.com/190410/talk'
   } = options;
   return (query, cb) => {
