@@ -42,12 +42,13 @@ const format = response => {
 module.exports = options => {
   const {
     key,
-    lang = 'fr',
+    lang,
+    atext_bad_prob_max,
     api = 'https://wsapi.simsimi.com/190410/talk'
   } = options;
   return (query, cb) => {
     if (typeof query === 'string')
-      query = { utext: query, lang };
+      query = { utext: query, lang, atext_bad_prob_max };
     const headers = {
       'x-api-key': key,
       'Content-Type': 'application/json',
